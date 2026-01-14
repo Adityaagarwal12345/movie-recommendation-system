@@ -14,7 +14,7 @@ function App() {
     setMovies([]);
 
     try {
-      const response = await fetch('http://localhost:3000/api/recommend', {
+      const response = await fetch('https://movie-recommendation-system-3k5n.onrender.com/api/recommend', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
