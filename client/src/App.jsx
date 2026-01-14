@@ -14,7 +14,8 @@ function App() {
     setMovies([]);
 
     try {
-      const response = await fetch('https://movie-recommendation-system-3k5n.onrender.com/api/recommend', {
+      const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+      const response = await fetch(`${BASE_URL}/api/recommend`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
